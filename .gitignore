@@ -1,32 +1,207 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-
-# Test binary, built with `go test -c`
 *.test
-
-# Code coverage profiles and other test artifacts
 *.out
+*.bin
+*.a
+build/
+bin/
+dist/
+output/
+coverage/
+profile.cov
 coverage.*
 *.coverprofile
-profile.cov
-
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
-# Go workspace file
+# --- Go workspace & cache ---
 go.work
 go.work.sum
-
-# env file
+vendor/
+pkg/
+.gocache/
+.cache/
+.tmp/
+testdata/
+# --- Node.js / JS / TS ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tgz
+.npm/
+.pnpm-store/
+.yarn/
+.yarn-integrity
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.eslintcache
+.next/
+.nuxt/
+out/
+.cache/
+dist/
+tmp/
+temp/
+build/
+public/
+lib/
+logs/
+*.log
+*.pid
+*.seed
+*.tsbuildinfo
+*.d.ts.map
+*.map
+# --- TypeScript ---
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+*.d.ts
+*.js.map
+*.mjs.map
+# --- Bash / CLI Scripts ---
+*.swp
+*.swx
+*.bak
+*.tmp
+*.temp
+*~
+*.lock
+*.pid
+*.log
+*.trace
+*.core
+*.err
+*.dump
+*.cache
+logs/
+.trash/
+.trash/*
+*.run
+*.out
+*.cfg.bak
+*.old
+# --- Environment / Secrets ---
 .env
-
-# Editor/IDE
-# .idea/
-# .vscode/
+.env.*
+.envrc
+*.local
+*.secret
+*.key
+*.pem
+*.crt
+*.csr
+*.p12
+*.der
+*.jks
+*.keystore
+*.credentials
+secrets/
+config/private/
+config/local/
+# --- IDE / Editor junk ---
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+*.iml
+*.vs/
+*.history/
+*.workspace/
+*.swp
+*.DS_Store
+Thumbs.db
+# --- OS Specific ---
+.DS_Store
+Desktop.ini
+ehthumbs.db
+Icon?
+__MACOSX/
+*.lnk
+# --- Docker / Container ---
+.docker/
+docker-compose.override.yml
+docker-compose.local.yml
+*.dockerfile
+Dockerfile.local
+.dockerignore
+# --- CI/CD / Pipelines ---
+.github/workflows/tmp/
+.ci/
+.pipeline/
+.gitlab-ci-local/
+*.lock.json
+.tmp-build/
+cache/
+artifacts/
+# --- Testing / Benchmark ---
+benchmarks/
+test-results/
+.cover/
+*.lcov
+*.prof
+*.trace
+*.gcda
+*.gcno
+*.gcov
+.jest/
+jest-cache/
+coverage-final.json
+reports/
+.nyc_output/
+# --- mkgo / Custom Tooling ---
+.mkgo/
+.mkgo_cache/
+mkgo.lock
+mkgo.temp/
+mkgo.debug/
+mkgo-out/
+.mkgo-release/
+# --- Logs & Dumps ---
+*.log
+*.dump
+*.trace
+*.stackdump
+*.core
+*.pid
+*.bak
+*.old
+# --- Security / Certificates ---
+*.pem
+*.crt
+*.key
+*.csr
+*.der
+*.p12
+*.jks
+*.pfx
+# --- Misc / Utility ---
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.bak
+*.old
+*.orig
+*.rej
+*.patch
+*.diff
+*.bak
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+# --- Ignore hidden system folders except Git ---
+.*
+!.gitignore
+!.gitattributes
+!.github/
+!.gitlab/
+!.vscode/
+!.idea/

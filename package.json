@@ -1,0 +1,68 @@
+{
+  "name": "mkgo",
+  "version": "1.0.0",
+  "description": "Build Go projects easily — a modern CLI orchestrator for Go builds, packaging, checksums, and signing.",
+  "keywords": [
+    "go",
+    "golang",
+    "build",
+    "tooling",
+    "cli",
+    "automation",
+    "release",
+    "devtools",
+    "developer-tools"
+  ],
+  "homepage": "https://github.com/neuxdotdev/mkgo#readme",
+  "bugs": {
+    "url": "https://github.com/neuxdotdev/mkgo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuxdotdev/mkgo.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "neuxdotdev",
+    "url": "https://github.com/neuxdotdev"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "mkgo": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "start": "node --enable-source-maps dist/index.js",
+    "build": "tsc --project tsconfig.json",
+    "clean": "rimraf dist .tsbuildinfo",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,json,md}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit",
+    "release": "npm version patch && npm publish --access public"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.2"
+  }
+}
