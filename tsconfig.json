@@ -12,7 +12,7 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noUncheckedSideEffectImports": true,
-    "rootDir": "./src",
+    "rootDir": "src",
     "outDir": "./dist",
     "sourceMap": true,
     "declaration": true,
