@@ -1,6 +1,6 @@
 {
   "name": "mkgo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build Go projects easily — a modern CLI orchestrator for Go builds, packaging, checksums, and signing.",
   "keywords": [
     "go",
