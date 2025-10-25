@@ -1,27 +1,27 @@
-import chalk from 'chalk'
-import gradient from 'gradient-string'
-import boxen, { type Options } from 'boxen'
+import boxen, { type Options } from "boxen";
+import chalk from "chalk";
+import gradient from "gradient-string";
 export class Logger {
   static success(message: string): void {
-    console.log(chalk.green('✓'), message)
+    console.log(chalk.green("✓"), message);
   }
   static error(message: string): void {
-    console.log(chalk.red('✗'), message)
+    console.log(chalk.red("✗"), message);
   }
   static warn(message: string): void {
-    console.log(chalk.yellow('!'), message)
+    console.log(chalk.yellow("!"), message);
   }
   static info(message: string): void {
-    console.log(chalk.blue('ℹ'), message)
+    console.log(chalk.blue("ℹ"), message);
   }
   static debug(message: string): void {
-    console.log(chalk.gray('›'), message)
+    console.log(chalk.gray("›"), message);
   }
   static verbose(message: string): void {
-    console.log(chalk.gray('↳'), message)
+    console.log(chalk.gray("↳"), message);
   }
   static gradient(text: string): string {
-    return gradient.atlas(text)
+    return gradient.atlas(text);
   }
   static box(content: string, title?: string): void {
     const options: Options = title
@@ -29,15 +29,15 @@ export class Logger {
           title,
           padding: 1,
           margin: 1,
-          borderStyle: 'round',
-          borderColor: 'blue',
+          borderStyle: "round",
+          borderColor: "blue",
         }
       : {
           padding: 1,
           margin: 1,
-          borderStyle: 'round',
-          borderColor: 'blue',
-        }
-    console.log(boxen(content, options))
+          borderStyle: "round",
+          borderColor: "blue",
+        };
+    console.log(boxen(content, options));
   }
 }
