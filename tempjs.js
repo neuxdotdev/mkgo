@@ -31,3 +31,4 @@ function sum(a, b) {
 
 // komentar di akhir file
 // bener-bener terakhir
+// test
